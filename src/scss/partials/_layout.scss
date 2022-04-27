@@ -1,0 +1,1796 @@
+$main-color: #8daae5;
+*{
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   font-size: 10px;
+   font-family: Arial, Helvetica, sans-serif;
+   background-size: cover;
+   
+   
+}
+body{
+   background-image: url('../../public/flay.jpg');
+   
+}
+.wrapper{
+   // display: flex;
+   max-width: 1360px;
+   min-height: 100vh;
+   margin: 0 auto;
+   // background-color: $main-color;
+   overflow: hidden;
+   // background-color: #000;
+}
+
+///stylkowanie HEADER
+.header{
+   display: flex;
+   height: 20vh;
+   overflow: hidden;
+
+   &__logo{
+      // flex-basis: 22.2vh;
+      background-image: url('../../public/logo.PNG');
+      width: 15%;
+      opacity: 0.7;
+      // &__img{
+      //    width: 100%;
+      //    display: block;
+      // }
+   }
+
+   &__list{
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      list-style: none;
+      border-bottom: 3px solid black;
+      &__item{
+         padding: 20px;
+         opacity: 1;
+         font-size: 2rem;
+         text-decoration: none;
+         // color: white;
+
+
+         &__link{
+            font-size: 2rem;
+            text-decoration: none;
+            color: white;
+            &:hover{
+               border-bottom: 2px solid yellow;
+            }
+         }
+      }
+   }
+
+   &__settings{
+      display: flex;
+      padding: 0 2% 0 2%;
+      align-items: center;
+      
+      &__icon-link--1,
+      &__icon-link--2{
+         margin: 0 10px;
+         font-size: 3rem;
+         color: #fff;
+         &:hover{
+            color: #000;
+            border-bottom: 2px solid yellow;
+         }
+      }
+   }
+
+   &__luggage{
+      position: relative;
+      width: 25%;
+      height: auto;
+      display: flex;
+      flex-wrap: wrap;
+
+      &--heading{
+         font-size: 1.5rem;
+         text-align: center;
+         padding: 2%;
+         text-transform: uppercase;
+         color: whitesmoke;
+         border-bottom: 2px solid black;
+      }
+
+      &__conteiner{
+         display: flex;
+         justify-content: space-between;
+         flex-direction: row;
+
+         &__txt{
+            margin-top: 2%;
+            width: 75%;
+            // background-color: aqua;
+
+            &__1{
+               font-size: 1.3rem;
+               padding: 1%;
+               font-weight: bold;
+         
+            }
+            &__2{
+               font-size: 1.3rem;
+               padding: 1%;
+               font-weight: bold;
+            }
+            &__3{
+               font-size: 1.3rem;
+               padding: 1%;
+               font-weight: bold;
+            }
+         }
+
+         &__options{
+            display: flex;
+            flex-direction: column;
+            margin: 3% auto 0 auto;
+            
+            
+
+            &__1{
+               padding: 3%;
+               width: 120%;
+               background-color: rgb(211, 200, 200);
+               text-transform: uppercase;
+               &:hover{
+                  background-color: black;
+                  color: white;
+               }
+               
+            }
+            &__2{
+               padding: 3%;
+               width: 120%;
+               margin-top: 6%;
+               background-color: rgb(211, 200, 200);;
+               text-transform: uppercase;
+               &:hover{
+                  background-color: black;
+                  color: white;
+               }
+            }
+            &__3{
+               padding: 3%;
+               width: 120%;
+               margin-top: 6%;
+               background-color: rgb(211, 200, 200);;
+               text-transform: uppercase;
+               &:hover{
+                  background-color: black;
+                  color: white;
+               }
+            }
+
+         }
+      }
+
+      &__btn{
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         height: 25%;
+         // background-color: red;
+
+         &--btn{
+            height: 65%;
+            width: 23%;
+            font-size: 1.1rem;
+            background-color: black;
+            color: white;
+            &:hover{
+               border: 2px solid yellow;
+            }
+         }
+      }
+
+   }
+}
+
+////STYLOWANIE POGODY WYLOTY/////
+
+.choice{
+   margin-top: 2%;
+   display: flex;
+   justify-content: space-between;
+   flex-direction: row;
+
+
+    ////STYLOWANIE LOTÓW /////
+
+   &__flights{
+      
+      flex-basis: 68%;
+      // background-color: cadetblue;
+
+         &__origin{
+            text-align: center;
+            text-transform: uppercase;
+            margin-left: 1.5%;
+            margin-bottom: 4%;
+            font-size: 1.3rem;
+            color: white;
+            background-color: rgb(143, 152, 156);
+            border: 3px solid rgb(97, 93, 93);
+            box-shadow:-3px 4px 2px -1px rgb(126, 120, 120);
+            width: 18%;
+            height: 10%;
+            border-radius: 50px;
+            cursor: pointer;
+            &:hover{
+               border-bottom: 3px solid yellow;
+               border-top: 3px solid yellow;
+            }
+            option{
+               
+               cursor: pointer;
+               font-size: 1.2rem;
+               color: #000;
+            }
+         }
+         &__destination{
+            text-align: center;
+            text-transform: uppercase;
+            margin-left: 1.5%;
+            font-size: 1.3rem;
+            color: white;
+            background-color: rgb(143, 152, 156);
+            border: 3px solid rgb(97, 93, 93);
+            box-shadow:-3px 4px 2px -1px rgb(126, 120, 120);
+            width: 18%;
+            height: 10%;
+            border-radius: 50px;
+            &:hover{
+               border-bottom: 3px solid yellow;
+               border-top: 3px solid yellow;
+            }
+            option{
+               
+               cursor: pointer;
+               font-size: 1.2rem;
+               color: #000;
+            }
+         }
+         &__ccy{
+            text-align: center;
+            text-transform: uppercase;
+            margin-left: 1.5%;
+            font-size: 1.3rem;
+            color: white;
+            background-color: rgb(143, 152, 156);
+            border: 3px solid rgb(97, 93, 93);
+            box-shadow:-3px 4px 2px -1px rgb(126, 120, 120);
+            width: 18%;
+            height: 10%;
+            border-radius: 50px;
+            &:hover{
+               border-bottom: 3px solid yellow;
+               border-top: 3px solid yellow;
+            }
+            option{
+               
+               cursor: pointer;
+               font-size: 1.2rem;
+               color: #000;
+            }
+         }
+   
+         &__search{
+            text-align: center;
+            text-transform: uppercase;
+            margin-left: 1.5%;
+            font-size: 1.3rem;
+            color: white;
+            background-color: rgb(143, 152, 156);
+            border: 3px solid rgb(97, 93, 93);
+            box-shadow:-3px 4px 2px -1px rgb(126, 120, 120);
+            width: 18%;
+            height: 10%;
+            border-radius: 50px;
+            &:hover{
+               border-bottom: 3px solid yellow;
+               border-top: 3px solid yellow;
+            }
+         }
+
+         &__summary{
+         text-align: center;
+         text-transform: uppercase;
+         margin-left: 1.5%;
+         font-size: 1.3rem;
+         color: white;
+         background-color: rgb(143, 152, 156);
+         border: 3px solid rgb(97, 93, 93);
+         box-shadow:-3px 4px 2px -1px rgb(126, 120, 120);
+         width: 18%;
+         height: 10%;
+         border-radius: 50px;
+         &:hover{
+            border-bottom: 3px solid red;
+            border-top: 3px solid red;
+         }
+      }
+
+         &__reservation{
+            padding: 4px;
+            margin-left: 1.5%;
+            font-size: 1.3rem;
+            color: white;
+            background-color: rgb(143, 152, 156);
+            border: 3px solid rgb(97, 93, 93);
+            box-shadow:-3px 4px 2px -1px rgb(126, 120, 120);
+         }
+         
+         &__tickets{
+            width: 97%;
+            &__div{
+               // border: 2px solid red;
+               border-left: 3px solid black;
+               text-align: center;
+               &--span{
+                  display: inline-block;
+                  font-size: 1.3rem;
+                  padding: 1% 0 1% 0;
+                  border-bottom: 1px solid black;
+                  line-height: 1.7rem;
+                  font-weight: bold;
+                  width: 20%;
+                  // margin-right: 2.5%;
+                  // background-color: red;
+               }
+               &--btn{
+                  background-color: rgb(143, 152, 156);
+                  border: 3px solid rgb(97, 93, 93);
+                  // box-shadow:-3px 4px 2px -1px rgb(126, 120, 120);
+                  color: white;
+                  font-size: 1.3rem;
+                  padding: 5px;
+                  border-radius: 50px;
+                  width: 15%;
+                  text-transform: uppercase;
+                  letter-spacing: 1px;
+                  margin-left: 1%;
+
+                  &:hover{
+                     border-bottom: 3px solid yellow;
+                     border-top: 3px solid yellow;
+                     color: #000;
+                     font-weight: bold;
+                     margin-left: 2.5%;
+                  }
+               }
+            }
+
+         }
+
+      
+   }
+
+   .wrap{
+      display: flex;
+      flex-direction: column;
+      opacity: 0.7;
+      background-size: cover;
+      background-image: url('../../public/flay.jpg');
+      border: 2px solid black;
+      width: 28%;
+
+   &__choice__weather{
+      // display: flex;
+      // flex-direction: column;
+      font-size: 2rem;
+      color: #000;
+      text-align: center;
+      font-weight: bold;
+      
+
+      &--p{
+         font-size: 3rem;
+         padding: 2vh;
+         border-bottom: 2px solid  black;
+      }
+      &__info{
+         font-size: 2rem;
+         color: #000;
+         font-weight: bold;
+         text-align: center;
+      }
+
+      &__data{
+         font-size: 2rem;
+         color: #000;
+         
+      }
+      
+      &__temp{
+         font-size: 2rem;
+         color: #000;
+      }
+      &__local{
+         font-size: 2rem;
+         color: #000;
+      }
+      &__img{
+         text-align: center;
+      }
+   }
+
+////STYLOWANIE POGODY Przyloty/////
+   &__choice__weather2{
+      // display: flex;
+      font-size: 2rem;
+      color: #000;
+      margin-top: 5%;
+      font-weight: bold;
+      text-align: center;
+      
+
+      &--p{
+         font-size: 3rem;
+         padding: 2vh;
+         border-bottom: 2px solid  black;
+         text-align: center;
+      }
+      &__info{
+         font-size: 2rem;
+         color: #000;
+         font-weight: bold;
+         text-align: center;
+      }
+
+      &__data{
+         font-size: 2rem;
+         color: #000;
+      }
+      
+      &__temp{
+         font-size: 2rem;
+         color: #000;
+      }
+      &__local{
+         font-size: 2rem;
+         color: #000;
+         // font-weight: bold;
+      }
+      &__img{
+         text-align: center;
+      }
+   }
+   }
+
+}
+
+
+
+.airplane{
+   display: flex;
+   margin-top: 3%;
+
+   &__svg--name{
+      
+      text-align: center;
+      font-size: 2rem;
+      line-height: 2rem;
+      background-color: rgb(143, 152, 156);
+      opacity: 0.8;
+      border-radius: 50px;
+      width: 40%;
+      height: 10%;
+      margin: 0% auto 3% auto;
+      padding: 7px 4px 1px 4px;
+      font-weight: bold;
+   }
+   
+   &__svg{
+      display: flex;
+      opacity: 0.8;
+      margin: 1% auto 10% auto;
+      width: 100%;
+      
+   }
+   &__svg__2--name2{
+      
+      text-align: center;
+      font-size: 2rem;
+      line-height: 2rem;
+      background-color: rgb(143, 152, 156);
+      opacity: 0.8;
+      border-radius: 50px;
+      width: 40%;
+      height: 10%;
+      margin: 0% auto 3% auto;
+      padding: 7px 4px 1px 4px;
+      font-weight: bold;
+   }
+   &__svg__2{
+      display: flex;
+      opacity: 0.8;
+      margin: 1% auto 10% auto;
+      width: 100%;
+      height: 100%;
+      // border: 1px solid red;
+   }
+}
+
+
+
+.summaryTicket{
+   background-image: url('../../public/Capture.PNG');
+   // display: flex;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   width: 45%;
+   height: 60%;
+   background-color: #000;
+
+   &__box{
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      // margin: 0% auto;
+      // background-color: rgb(201, 39, 39);
+      &__price{
+         font-size: 1.5rem;
+         padding: 1.2%;
+         font-weight: bold;
+         // background-color: rgb(143, 152, 156);
+         // width: 35%;
+         // text-align: center;
+      }
+      &__departure{
+         font-size: 1.5rem;
+         padding: 1.2%;
+         font-weight: bold;
+      }
+      &__numOfChange{
+         font-size: 1.5rem;
+         padding: 1.2%;
+         font-weight: bold;
+      }
+      &__duration{
+         font-size: 1.5rem;
+         padding: 1.2%;
+         font-weight: bold;
+      }
+      &__num{
+         display: flex;
+         flex-direction: row;
+         justify-content: center;
+
+         &__information{
+            font-size: 1.5rem;
+            padding: 1.2%;
+            font-weight: bold;
+         }
+
+         &__numSeats{
+            font-size: 1.5rem;
+            padding: 1.2%;
+            font-weight: bold;
+            
+         }
+      }
+      &__luggage{
+         font-size: 1.5rem;
+         padding: 1.2%;
+         font-weight: bold;
+      }
+      &__totalCostPrice{
+         font-size: 1.5rem;
+         padding: 1.2%;
+         font-weight: bold;
+      }
+      &__announcement{
+         font-size: 2rem;
+         padding: 2%;
+         font-weight: bold;
+         color: red;
+      }
+   }
+
+
+
+   &__info{
+      text-align: center;
+      padding: 2%;
+      color: black;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      font-weight: bold;
+      border-bottom: 1px solid black;
+      
+
+   }
+
+   &__input{
+      display: flex;
+      flex-direction: column;
+      width: 29%;
+
+      margin: 1% 55% auto 18%;
+
+      &__name{
+         text-align: center;
+         font-size: 1.3rem;
+         padding: 2% 0% 2% 0%;
+         color: black;
+         text-transform: uppercase;
+         background-color: rgb(143, 152, 156);
+         border: 3px solid rgb(97, 93, 93);
+         box-shadow:-3px 4px 2px -1px rgb(126, 120, 120);
+         border-radius: 50px;
+
+         &:focus{
+            outline: none;
+            border-bottom: 3px solid yellow;
+            border-top: 3px solid yellow;
+            animation: borders 3s linear infinite;
+         }
+         &:hover{
+            border-bottom: 3px solid yellow;
+            border-top: 3px solid yellow;
+         }
+         
+      }
+
+
+
+      &__surname{
+         text-align: center;
+         font-size: 1.3rem;
+         padding: 2% 0% 2% 0%;
+         color: black;
+         text-transform: uppercase;
+         margin-top: 5%;
+         background-color: rgb(143, 152, 156);
+         border: 3px solid rgb(97, 93, 93);
+         box-shadow:-3px 4px 2px -1px rgb(126, 120, 120);
+         border-radius: 50px;
+         &:focus{
+            outline: none;
+            border-bottom: 3px solid yellow;
+            border-top: 3px solid yellow;
+            animation: borders 3s linear infinite;
+         }
+         &:hover{
+            border-bottom: 3px solid yellow;
+            border-top: 3px solid yellow;
+         }
+      }
+      @keyframes borders {
+         0%{} 
+         50% {
+            border: 3px solid rgb(97, 93, 93);
+         }
+         100% {}
+      }
+   }
+
+
+   &__confirmation{
+      position: fixed;
+      bottom: 4%;
+      right: 24%;
+      text-align: center;
+      text-transform: uppercase;
+      margin-left: 1.5%;
+      font-size: 1.3rem;
+      color: white;
+      background-color: rgb(143, 152, 156);
+      border: 3px solid rgb(97, 93, 93);
+      box-shadow:-3px 4px 2px -1px rgb(126, 120, 120);
+      width: 22%;
+      height: 10%;
+      border-radius: 50px;
+      &:hover{
+         border-bottom: 3px solid rgb(10, 236, 10);
+         border-top: 3px solid rgb(10, 236, 10);
+      }
+   }
+
+   &__exit{
+      position: fixed;
+      bottom: 4%;
+      right: 4%;
+      text-align: center;
+      text-transform: uppercase;
+      margin-left: 1.5%;
+      font-size: 1.3rem;
+      color: white;
+      background-color: rgb(143, 152, 156);
+      border: 3px solid rgb(97, 93, 93);
+      box-shadow:-3px 4px 2px -1px rgb(126, 120, 120);
+      width: 18%;
+      height: 10%;
+      border-radius: 50px;
+      &:hover{
+         border-bottom: 3px solid red;
+         border-top: 3px solid red;
+      }
+   }
+
+}
+
+.logTicket{
+   background-image: url('../../public/Capture.PNG');
+   // display: flex;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   width: 45%;
+   height: 60%;
+   background-color: #000;
+
+   &__info{
+      color: #fff;
+      padding: 2%;
+      text-align: center;
+      font-size: 2rem;
+   }
+
+   &__boxTicket{
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      margin-top: 3%;
+
+      &__fromWhere{
+         font-size: 1.5rem;
+         padding: 1.2%;
+         font-weight: bold;
+      }
+      &__toWhere{
+         font-size: 1.5rem;
+         padding: 1.2%;
+         font-weight: bold;
+      }
+      &__price{
+         font-size: 1.5rem;
+         padding: 1.2%;
+         font-weight: bold;
+      }
+      &__departure{
+         font-size: 1.5rem;
+         padding: 1.2%;
+         font-weight: bold;
+      }
+      &__numberOfChange{
+         font-size: 1.5rem;
+         padding: 1.2%;
+         font-weight: bold;
+      }
+      &__flightDuration{
+         font-size: 1.5rem;
+         padding: 1.2%;
+         font-weight: bold;
+      }
+      &__placeOnThePlane{
+         font-size: 1.5rem;
+         padding: 1.2%;
+         font-weight: bold;
+         
+      }
+
+
+
+
+   }
+
+   &__input{
+      display: flex;
+      justify-content: center;
+
+      &__login{
+         text-align: center;
+         font-size: 1.2rem;
+         padding: 1.5% 0% 1.5% 0%;
+         color: white;
+         text-transform: uppercase;
+         background-color: rgb(143, 152, 156);
+         border: 3px solid rgb(97, 93, 93);
+         box-shadow:-3px 4px 2px -1px rgb(126, 120, 120);
+         border-radius: 50px;
+         margin-right: 3%;
+         &:focus{
+            outline: none;
+            border-bottom: 3px solid yellow;
+            border-top: 3px solid yellow;
+            animation: borders 3s linear infinite;
+         }
+         &:hover{
+            border-bottom: 3px solid yellow;
+            border-top: 3px solid yellow;
+         }
+      }
+   
+      &__haslo{
+         text-align: center;
+         font-size: 1.2rem;
+         padding: 1.5% 0% 1.5% 0%;
+         color: white;
+         text-transform: uppercase;
+         background-color: rgb(143, 152, 156);
+         border: 3px solid rgb(97, 93, 93);
+         box-shadow:-3px 4px 2px -1px rgb(126, 120, 120);
+         border-radius: 50px;
+         margin-left: 3%;
+         &:focus{
+            outline: none;
+            border-bottom: 3px solid yellow;
+            border-top: 3px solid yellow;
+            animation: borders 3s linear infinite;
+         }
+         &:hover{
+            border-bottom: 3px solid yellow;
+            border-top: 3px solid yellow;
+         }
+      }
+   }
+   &__exit{
+      position: fixed;
+      bottom: 4%;
+      right: 4%;
+      text-align: center;
+      text-transform: uppercase;
+      margin-left: 1.5%;
+      font-size: 1.3rem;
+      color: white;
+      background-color: rgb(143, 152, 156);
+      border: 3px solid rgb(97, 93, 93);
+      box-shadow:-3px 4px 2px -1px rgb(126, 120, 120);
+      width: 18%;
+      height: 10%;
+      border-radius: 50px;
+      &:hover{
+         border-bottom: 3px solid red;
+         border-top: 3px solid red;
+      }
+   }
+   &__confirmation{
+      position: fixed;
+      bottom: 4%;
+      right: 24%;
+      text-align: center;
+      text-transform: uppercase;
+      margin-left: 1.5%;
+      font-size: 1.3rem;
+      color: white;
+      background-color: rgb(143, 152, 156);
+      border: 3px solid rgb(97, 93, 93);
+      box-shadow:-3px 4px 2px -1px rgb(126, 120, 120);
+      width: 22%;
+      height: 10%;
+      border-radius: 50px;
+      &:hover{
+         border-bottom: 3px solid rgb(10, 236, 10);
+         border-top: 3px solid rgb(10, 236, 10);
+      }
+   }
+}
+
+
+
+::-webkit-input-placeholder {
+   color: whitesmoke;
+   }
+   :-moz-placeholder {
+   color: whitesmoke;
+   }
+   ::-moz-placeholder { 
+   color: whitesmoke;
+   }
+   :-ms-input-placeholder {
+   color: whitesmoke;
+   }
+
+
+   @media screen and (max-width: 812px) { 
+      .header{
+         // flex-direction: column;
+         height: 30vh;
+         flex-shrink: 0;
+         &__logo{
+            width: 1%;
+         }
+         &__list{
+            width: 40%;
+            justify-content: space-around;
+            flex-grow: 0;
+            flex-wrap: wrap;
+   
+            &__item{
+               padding: 15px;
+            }
+         }
+         &__settings{
+            // flex-direction: column;
+            padding: 0 2% 0 3%;
+         }
+         &__luggage{
+            width: 37%;
+         }
+      }
+      
+      .choice{
+         flex-direction: column;
+         .wrap{
+            flex-direction: row;
+            width: 75%;
+            margin-top: 5%;
+            margin-left: auto;
+            margin-right: auto;
+            &__choice__weather{
+               margin-right: 15%;
+            }
+   
+            &__choice__weather2{
+               margin-top: 0;
+            }
+         }
+      }
+
+      .airplane{
+
+         &__svg--name{
+            width: 60%;
+            height: 15%;
+         }
+         &__svg__2--name2{
+            width: 60%;
+            height: 15%;   
+         }
+   }
+   .summaryTicket{
+      width: 80%;
+      height: 46%;
+   
+   
+      &__box{
+         display: flex;
+         flex-direction: column;
+         text-align: center;
+         // margin: 0% auto;
+         // background-color: rgb(201, 39, 39);
+         &__price{
+            font-size: 1rem;
+         }
+         &__departure{
+            font-size: 1rem;
+
+         }
+         &__numOfChange{
+            font-size: 1rem;
+         }
+         &__duration{
+            font-size: 1rem;
+         }
+         &__num{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+   
+            &__information{
+               font-size: 1rem;
+            }
+   
+            &__numSeats{
+               font-size: 1rem;
+            }
+         }
+         &__luggage{
+            font-size: 1rem;
+         }
+         &__totalCostPrice{
+            font-size: 1rem;
+         }
+         &__announcement{
+            font-size: 1rem;
+         }
+      }
+
+      &__info{
+         font-size: 1.2rem;
+      }
+   
+      &__input{
+         width: 40%;
+   
+         margin: 5% 50% auto 10%;
+   
+         &__name{
+            text-align: center;
+            font-size: 1rem;
+            padding: 2% 0% 2% 0%;
+         }
+   
+   
+   
+         &__surname{
+            font-size: 1rem;
+            padding: 2% 0% 2% 0%;
+            margin-top: 7%;
+         }
+
+      }
+   
+   
+      &__confirmation{
+         right: 45%;
+         margin-left: 1.5%;
+         font-size: 1rem;
+         width: 35%;
+         height: 9%;
+      }
+   
+      &__exit{
+         position: fixed;
+         bottom: 4%;
+         right: 4%;
+         text-align: center;
+         text-transform: uppercase;
+         margin-left: 1.5%;
+         font-size: 1rem;
+         width: 35%;
+         height: 9%;
+
+
+      }
+   
+   }
+
+   .logTicket{
+
+      width: 75%;
+      height: 60%;
+   
+      &__info{
+         font-size: 1.3rem;
+      }
+   
+      &__boxTicket{
+   
+         &__fromWhere{
+            font-size: 1rem;
+            color: white;
+         }
+         &__toWhere{
+            font-size: 1rem;
+            color: white;
+         }
+         &__price{
+            font-size: 1rem;
+            color: white;
+         }
+         &__departure{
+            font-size: 1rem;
+            color: white;
+         }
+         &__numberOfChange{
+            font-size: 1rem;
+            color: white;
+         }
+         &__flightDuration{
+            font-size: 1rem;
+            color: white;
+         }
+         &__placeOnThePlane{
+            font-size: 1rem;
+            color: white;
+            
+         }
+   
+   
+   
+   
+      }
+   
+      &__input{
+         display: flex;
+         
+   
+         &__login{
+            width: 40%;
+            font-size: 0.9rem;
+
+         }
+      
+         &__haslo{
+            width: 40%;
+            font-size: 0.9rem;
+
+         }
+      }
+
+      &__exit{
+         font-size: 0.9rem;
+         width: 40%;
+      }
+      &__confirmation{
+         right: 50%;
+         font-size: 0.9rem;
+         width: 40%;
+
+      }
+   }
+   }
+
+   @media screen and (max-width: 1112px) { 
+      .header{
+         // flex-direction: column;
+         height: 30vh;
+         flex-shrink: 0;
+         &__logo{
+            width: 1%;
+         }
+         &__list{
+            width: 50%;
+            justify-content: space-around;
+            flex-grow: 0;
+            flex-wrap: wrap;
+   
+            &__item{
+               padding: 15px;
+            }
+         }
+         &__settings{
+            // flex-direction: column;
+            padding: 0 2% 0 3%;
+         }
+         &__luggage{
+            width: 30%;
+            color: whitesmoke;
+         }
+      }
+      
+      .choice{
+         flex-direction: column;
+         .wrap{
+            flex-direction: row;
+            width: 75%;
+            margin-top: 5%;
+            margin-left: auto;
+            margin-right: auto;
+            &__choice__weather{
+               margin-right: 15%;
+            }
+   
+            &__choice__weather2{
+               margin-top: 0;
+            }
+         }
+      }
+
+      .airplane{
+
+         &__svg--name{
+            width: 60%;
+            height: 15%;
+         }
+         &__svg__2--name2{
+            width: 60%;
+            height: 15%;   
+         }
+   }
+
+   .summaryTicket{
+      width: 80%;
+      height: 46%;
+   
+   
+      &__box{
+         display: flex;
+         flex-direction: column;
+         text-align: center;
+         // margin: 0% auto;
+         // background-color: rgb(201, 39, 39);
+         &__price{
+            font-size: 1rem;
+         }
+         &__departure{
+            font-size: 1rem;
+
+         }
+         &__numOfChange{
+            font-size: 1rem;
+         }
+         &__duration{
+            font-size: 1rem;
+         }
+         &__num{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+   
+            &__information{
+               font-size: 1rem;
+            }
+   
+            &__numSeats{
+               font-size: 1rem;
+            }
+         }
+         &__luggage{
+            font-size: 1rem;
+         }
+         &__totalCostPrice{
+            font-size: 1rem;
+         }
+         &__announcement{
+            font-size: 1rem;
+         }
+      }
+
+      &__info{
+         font-size: 1.2rem;
+      }
+   
+      &__input{
+         width: 40%;
+   
+         margin: 5% 50% auto 10%;
+   
+         &__name{
+            text-align: center;
+            font-size: 1rem;
+            padding: 2% 0% 2% 0%;
+         }
+   
+   
+   
+         &__surname{
+            font-size: 1rem;
+            padding: 2% 0% 2% 0%;
+            margin-top: 7%;
+         }
+
+      }
+   
+   
+      &__confirmation{
+         right: 45%;
+         margin-left: 1.5%;
+         font-size: 1rem;
+         width: 35%;
+         height: 9%;
+      }
+   
+      &__exit{
+         position: fixed;
+         bottom: 4%;
+         right: 4%;
+         text-align: center;
+         text-transform: uppercase;
+         margin-left: 1.5%;
+         font-size: 1rem;
+         width: 35%;
+         height: 9%;
+
+
+      }
+   
+   }
+
+   .logTicket{
+
+      width: 55%;
+      height: 50%;
+   
+      &__info{
+         font-size: 1.3rem;
+      }
+   
+      &__boxTicket{
+   
+         &__fromWhere{
+            font-size: 1rem;
+            font-weight: bold;
+         }
+         &__toWhere{
+            font-size: 1rem;
+            font-weight: bold;
+         }
+         &__price{
+            font-size: 1rem;
+            font-weight: bold;
+         }
+         &__departure{
+            font-size: 1rem;
+            font-weight: bold;
+         }
+         &__numberOfChange{
+            font-size: 1rem;
+            font-weight: bold;
+         }
+         &__flightDuration{
+            font-size: 1rem;
+            font-weight: bold;
+         }
+         &__placeOnThePlane{
+            font-size: 1rem;
+            font-weight: bold;
+            
+         }
+   
+   
+   
+   
+      }
+   
+      &__input{
+         display: flex;
+         
+   
+         &__login{
+            width: 40%;
+            font-size: 0.9rem;
+
+         }
+      
+         &__haslo{
+            width: 40%;
+            font-size: 0.9rem;
+
+         }
+      }
+
+      &__exit{
+         font-size: 0.9rem;
+         width: 40%;
+      }
+      &__confirmation{
+         right: 50%;
+         font-size: 0.9rem;
+         width: 40%;
+
+      }
+   }
+
+   }
+
+   @media (max-width: 640px) {
+      .header{
+         display: flex;
+         height: 30vh;
+         overflow: hidden;
+         flex-wrap: wrap;
+      
+         &__logo{
+            background-image: none
+         }
+      
+         &__list{
+            width: 70%;
+
+            &__item{
+               padding: 7px;
+      
+               &__link{
+                  font-size: 0.9rem;
+               }
+            }
+         }
+      
+         &__settings{
+            &__icon-link--1,
+            &__icon-link--2{
+               font-size: 1.5rem;
+            }
+         }
+      
+         &__luggage{
+            position: relative;
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-wrap: wrap;
+      
+            &--heading{
+               font-size: 1rem;
+            }
+      
+            &__conteiner{
+               display: flex;
+               justify-content: space-between;
+               flex-direction: row;
+      
+               &__txt{
+                  margin-top: 2%;
+                  width: 70%;
+                  // background-color: aqua;
+      
+                  &__1{
+                     font-size: 1rem;
+                     padding: 1%;
+                     font-weight: bold;
+               
+                  }
+                  &__2{
+                     font-size: 1rem;
+                     padding: 1%;
+                     font-weight: bold;
+                  }
+                  &__3{
+                     font-size: 1rem;
+                     padding: 1%;
+                     font-weight: bold;
+                  }
+               }
+      
+               &__options{
+                  margin: 1% auto 0 auto;
+                  &__1{
+                     padding: 3%;
+                  }
+                  &__2{
+                     padding: 3%;
+                     margin-top: 4%;
+
+                  }
+                  &__3{
+                     padding: 3%;
+                     margin-top: 4%;
+                  }
+      
+               }
+            }
+      
+            &__btn{
+               &--btn{
+                  height: 55%;
+                  font-size: 1rem;
+               }
+            }
+      
+         }
+      }  
+
+      .choice{
+         margin-top: 2%;
+         display: flex;
+         justify-content: space-between;
+         flex-direction: row;
+         flex-direction: column;
+      
+      
+          ////STYLOWANIE LOTÓW /////
+      
+         &__flights{
+            
+               // flex-basis: 68%;
+               width: 100%;
+            align-self: center;
+      
+               &__origin{
+                  font-size: 0.9rem;
+                  width: 31%;
+                  padding: 1%;
+
+               }
+               &__destination{
+                  font-size: 0.9rem;
+                  width: 31%;
+                  padding: 1%;
+               }
+               &__ccy{
+                  font-size: 0.9rem;
+                  width: 31%;
+                  padding: 1%;
+
+               }
+         
+               &__search{
+                  font-size: 0.95rem;
+                  width: 31%;
+                  padding: 1%;
+               }
+      
+               &__summary{
+               font-size: 0.95rem;
+               width: 31%;
+               padding: 1%;
+            }
+      
+               &__reservation{
+                  padding: 4px;
+                  margin-left: 1.5%;
+                  font-size: 1rem;
+ 
+               }
+               
+               &__tickets{
+                  width: 90%;
+                  &__div{
+
+                     border-left: none;
+                     border-bottom: 2px solid black;
+                     margin-top: 1%;
+                     &--span{
+                        font-size: 0.9rem;
+                        border-bottom: none;
+                        line-height: 1.7rem;
+                        width: 20%;
+                     }
+                     &--btn{
+                        font-size: 0.9rem;
+                        width: 30%;
+                        margin-bottom: 2%;
+
+                     }
+                  }
+      
+               }
+      
+            
+         }
+      
+         .wrap{
+            flex-direction: row;
+            width: 90%;
+      
+         &__choice__weather{
+            
+            &--p{
+               font-size: 1.2rem;
+            }
+            &__info{
+               font-size: 1.2rem;
+            }
+      
+            &__data{
+               font-size: 1.2rem;
+            }
+            
+            &__temp{
+               font-size: 1.2rem;
+            }
+            &__local{
+               font-size: 1.2rem;
+            }
+         }
+      
+      ////STYLOWANIE POGODY Przyloty/////
+         &__choice__weather2{
+            &--p{
+               font-size: 1.2rem;
+            }
+            &__info{
+               font-size: 1.2rem;
+            }
+      
+            &__data{
+               font-size: 1.2rem;
+            }
+            
+            &__temp{
+               font-size: 1.2rem;
+            }
+            &__local{
+               font-size: 1.2rem;
+
+            }
+
+         }
+         }
+      
+      }
+      
+      .airplane{
+         display: flex;
+         margin-top: 3%;
+      
+         &__svg--name{
+            font-size: 1rem;
+            line-height: 1rem;
+            width: 80%;
+            height: 8%;
+
+         }
+         
+         &__svg{
+            display: flex;
+            opacity: 0.8;
+            margin: 1% auto 10% auto;
+            width: 100%;
+            height: 50vh;
+            
+         }
+         &__svg__2--name2{
+            font-size: 1rem;
+            line-height: 1rem;
+            width: 80%;
+            height: 8%;
+         }
+         &__svg__2{
+            display: flex;
+            opacity: 0.8;
+            margin: 1% auto 10% auto;
+            width: 120%;
+            height: 50vh;
+            // border: 1px solid red;
+         }
+      }
+
+      .summaryTicket{
+         width: 80%;
+         height: 46%;
+      
+      
+         &__box{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            // margin: 0% auto;
+            // background-color: rgb(201, 39, 39);
+            &__price{
+               font-size: 1rem;
+            }
+            &__departure{
+               font-size: 1rem;
+
+            }
+            &__numOfChange{
+               font-size: 1rem;
+            }
+            &__duration{
+               font-size: 1rem;
+            }
+            &__num{
+               display: flex;
+               flex-direction: row;
+               justify-content: center;
+      
+               &__information{
+                  font-size: 1rem;
+               }
+      
+               &__numSeats{
+                  font-size: 1rem;
+               }
+            }
+            &__luggage{
+               font-size: 1rem;
+            }
+            &__totalCostPrice{
+               font-size: 1rem;
+            }
+            &__announcement{
+               font-size: 1rem;
+            }
+         }
+
+         &__info{
+            font-size: 1.2rem;
+         }
+      
+         &__input{
+            width: 40%;
+      
+            margin: 5% 50% auto 10%;
+      
+            &__name{
+               text-align: center;
+               font-size: 1rem;
+               padding: 2% 0% 2% 0%;
+            }
+      
+      
+      
+            &__surname{
+               font-size: 1rem;
+               padding: 2% 0% 2% 0%;
+               margin-top: 7%;
+            }
+
+         }
+      
+      
+         &__confirmation{
+            right: 45%;
+            margin-left: 1.5%;
+            font-size: 1rem;
+            width: 35%;
+            height: 9%;
+         }
+      
+         &__exit{
+            position: fixed;
+            bottom: 4%;
+            right: 4%;
+            text-align: center;
+            text-transform: uppercase;
+            margin-left: 1.5%;
+            font-size: 1rem;
+            width: 35%;
+            height: 9%;
+
+
+         }
+      
+      }
+
+      .logTicket{
+
+         width: 75%;
+         height: 40%;
+      
+         &__info{
+            font-size: 1.3rem;
+         }
+      
+         &__boxTicket{
+      
+            &__fromWhere{
+               font-size: 1rem;
+               color: white;
+            }
+            &__toWhere{
+               font-size: 1rem;
+               color: white;
+            }
+            &__price{
+               font-size: 1rem;
+               color: white;
+            }
+            &__departure{
+               font-size: 1rem;
+               color: white;
+            }
+            &__numberOfChange{
+               font-size: 1rem;
+               color: white;
+            }
+            &__flightDuration{
+               font-size: 1rem;
+               color: white;
+            }
+            &__placeOnThePlane{
+               font-size: 1rem;
+               color: white;
+               
+            }
+      
+      
+      
+      
+         }
+      
+         &__input{
+            display: flex;
+            
+      
+            &__login{
+               width: 40%;
+               font-size: 0.9rem;
+
+            }
+         
+            &__haslo{
+               width: 40%;
+               font-size: 0.9rem;
+   
+            }
+         }
+
+         &__exit{
+            font-size: 0.9rem;
+            width: 40%;
+         }
+         &__confirmation{
+            right: 50%;
+            font-size: 0.9rem;
+            width: 40%;
+
+         }
+      }
+   }
+
+
